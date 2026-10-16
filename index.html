@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ILM - Islamic Literature & Material</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * { box-sizing: border-box; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #065f46 0%, #047857 30%, #059669 60%, #10b981 100%);
+    }
+
+    .feature-icon {
+      width: 56px; height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 16px;
+      font-size: 26px;
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+    .delay-700 { animation-delay: 0.7s; }
+
+    .star-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30l5-8.66L30 12.68l-5 8.66L30 30zm0 0l8.66 5L47.32 30l-8.66-5L30 30zm0 0l-5 8.66 5 8.66 5-8.66L30 30zm0 0l-8.66-5L12.68 30l8.66 5L30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .screenshot-mockup {
+      width: 180px;
+      height: 360px;
+      border-radius: 28px;
+      border: 3px solid rgba(255,255,255,0.3);
+      background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased" style="font-family: 'Inter', system-ui, sans-serif; margin: 0; padding: 0;">
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-gradient star-pattern relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 flex flex-col md:flex-row items-center gap-12">
+      <!-- Left Content -->
+      <div class="flex-1 text-center md:text-left animate-fade-in">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/90 mb-6">
+          🕌 Islamic Literature & Material
+        </div>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-5 tracking-tight">
+          ILM
+        </h1>
+        <p class="text-xl md:text-2xl text-emerald-100 font-light mb-3">
+          Islamic Content in Gujarati
+        </p>
+        <p class="text-base text-emerald-200/80 max-w-lg mb-8 leading-relaxed">
+          Assalamu Alaikum! Access a comprehensive collection of Islamic calendar, Quran, Kalams, Duas, Aamals, Nohas, Majalis and much more — all in Gujarati, right on your phone.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="https://play.google.com/store/apps/details?id=com.mh.mueawin.mainfolder" target="_blank"
+             class="inline-flex items-center gap-3 bg-white text-emerald-800 font-semibold px-7 py-3.5 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734c0-.382.218-.72.609-.92z" fill="#4285F4"/>
+              <path d="M17.244 8.555L14.5 10.142 13.792 12l.708 1.858 2.744 1.587 3.1-1.787c.88-.508.88-1.808 0-2.316l-3.1-1.787z" fill="#FBBC04"/>
+              <path d="M3.609 1.814L13.792 12l.708-1.858-7.446-7.446-3.445 2.118z" fill="#34A853"/>
+              <path d="M3.609 22.186l3.445-2.118L14.5 12.622l-.708-1.858L3.609 22.186z" fill="#EA4335"/>
+            </svg>
+            Get it on Google Play
+          </a>
+          <a href="#features"
+             class="inline-flex items-center gap-2 glass-card text-white font-medium px-7 py-3.5 rounded-2xl hover:bg-white/15 transition-all duration-300">
+            Explore Features ↓
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Phone Mockup -->
+      <div class="flex-shrink-0 animate-float animate-fade-in delay-300">
+        <div class="screenshot-mockup flex flex-col">
+          <!-- Status bar -->
+          <div class="bg-emerald-700 text-white text-[10px] flex justify-between px-4 py-1.5">
+            <span>12:00</span>
+            <span>●●●</span>
+          </div>
+          <!-- App header -->
+          <div class="bg-emerald-600 text-white text-center py-4 px-3">
+            <div class="text-lg font-bold tracking-wide">ILM</div>
+            <div class="text-[10px] opacity-80 mt-0.5">Islamic Literature & Material</div>
+          </div>
+          <!-- Menu items -->
+          <div class="flex-1 bg-white p-2.5 space-y-2">
+            <div class="bg-emerald-50 rounded-xl p-2.5 flex items-center gap-2.5 border border-emerald-100">
+              <span class="text-base">📅</span>
+              <div>
+                <div class="text-[11px] font-semibold text-emerald-900">Islamic Calendar</div>
+                <div class="text-[9px] text-emerald-600">Auto-update</div>
+              </div>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-2.5 flex items-center gap-2.5 border border-emerald-100">
+              <span class="text-base">📖</span>
+              <div>
+                <div class="text-[11px] font-semibold text-emerald-900">Quran</div>
+                <div class="text-[9px] text-emerald-600">Read & Listen</div>
+              </div>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-2.5 flex items-center gap-2.5 border border-emerald-100">
+              <span class="text-base">🤲</span>
+              <div>
+                <div class="text-[11px] font-semibold text-emerald-900">Duas & Aamal</div>
+                <div class="text-[9px] text-emerald-600">Daily prayers</div>
+              </div>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-2.5 flex items-center gap-2.5 border border-emerald-100">
+              <span class="text-base">🎵</span>
+              <div>
+                <div class="text-[11px] font-semibold text-emerald-900">Kalams</div>
+                <div class="text-[9px] text-emerald-600">Poetry & Verses</div>
+              </div>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-2.5 flex items-center gap-2.5 border border-emerald-100">
+              <span class="text-base">🎤</span>
+              <div>
+                <div class="text-[11px] font-semibold text-emerald-900">Noha & Majlis</div>
+                <div class="text-[9px] text-emerald-600">Community content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave divider -->
+    <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;">
+      <path fill="var(--background, #ffffff)" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"/>
+    </svg>
+  </section>
+
+  <!-- ===== APP INFO BAR ===== -->
+  <section class="max-w-6xl mx-auto px-6 py-8">
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 flex flex-wrap items-center justify-between gap-6 shadow-sm animate-fade-in delay-200">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white text-2xl font-bold shadow-md">
+          I
+        </div>
+        <div>
+          <h2 class="text-lg font-bold text-[var(--foreground)]">ILM Islamic Content</h2>
+          <p class="text-sm text-[var(--muted-foreground)]">by MH-Developer</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-medium px-3 py-1.5 rounded-full">📱 Android</span>
+        <span class="inline-flex items-center gap-1.5 bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1.5 rounded-full">🔧 Tools</span>
+        <span class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-medium px-3 py-1.5 rounded-full">🌐 Gujarati</span>
+        <span class="inline-flex items-center gap-1.5 bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1.5 rounded-full">☪️ Islamic</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section id="features" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="text-center mb-14 animate-fade-in delay-300">
+      <h2 class="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-3">Features</h2>
+      <p class="text-[var(--muted-foreground)] text-lg max-w-2xl mx-auto">
+        Everything you need for daily Islamic practice, learning, and community engagement — in one lightweight app.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Feature 1 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-300">
+        <div class="feature-icon bg-emerald-100 text-emerald-600 mb-4">📅</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Islamic Calendar</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          Auto-updating Islamic (Hijri) calendar with accurate dates. Requires an internet connection to keep dates synchronized and current.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-400">
+        <div class="feature-icon bg-blue-100 text-blue-600 mb-4">📖</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Quran Integration</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          Access the Holy Quran directly within the app with online features for reading and exploration in a clean, accessible format.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-500">
+        <div class="feature-icon bg-amber-100 text-amber-600 mb-4">🤲</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Duas & Aamal</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          A growing collection of daily supplications (duas) and practices (aamal) for various occasions, presented in Gujarati text.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-500">
+        <div class="feature-icon bg-rose-100 text-rose-600 mb-4">🎵</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Kalams & Poetry</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          Browse a curated collection of Islamic kalams (poetic verses) celebrating faith, devotion, and spirituality.
+        </p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-600">
+        <div class="feature-icon bg-violet-100 text-violet-600 mb-4">🎤</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Noha & Majalis</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          Access texts and content related to Nohas and Majalis for community gatherings and religious commemorations.
+        </p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 animate-fade-in delay-700">
+        <div class="feature-icon bg-teal-100 text-teal-600 mb-4">⚡</div>
+        <h3 class="text-lg font-semibold text-[var(--foreground)] mb-2">Lightweight & Fast</h3>
+        <p class="text-sm text-[var(--muted-foreground)] leading-relaxed">
+          Optimized for quick installs and smooth performance. Regular bug fixes and updates keep the experience reliable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DAILY USE SECTION ===== -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="hero-gradient rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 star-pattern animate-fade-in delay-400">
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl font-bold text-white mb-4">Daily Use Companion</h2>
+        <p class="text-emerald-100 text-base leading-relaxed mb-6 max-w-lg">
+          ILM is designed for everyday use — from checking the Islamic date each morning, to reading daily duas, exploring the Quran, or finding the right kalam for an occasion. It's your pocket companion for Islamic content in Gujarati.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+          <div class="glass-card rounded-xl px-4 py-2.5 text-white text-sm flex items-center gap-2">
+            <span>✅</span> Auto-update calendar
+          </div>
+          <div class="glass-card rounded-xl px-4 py-2.5 text-white text-sm flex items-center gap-2">
+            <span>✅</span> Offline reading
+          </div>
+          <div class="glass-card rounded-xl px-4 py-2.5 text-white text-sm flex items-center gap-2">
+            <span>✅</span> Regular updates
+          </div>
+          <div class="glass-card rounded-xl px-4 py-2.5 text-white text-sm flex items-center gap-2">
+            <span>✅</span> Gujarati text
+          </div>
+        </div>
+      </div>
+      <div class="flex-shrink-0 text-center">
+        <div class="w-40 h-40 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center mx-auto">
+          <span class="text-7xl">🕌</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APP DETAILS TABLE ===== -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-[var(--foreground)] mb-8 text-center animate-fade-in delay-300">App Details</h2>
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl overflow-hidden shadow-sm animate-fade-in delay-400">
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="border-b border-[var(--border)]">
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)] w-1/3">App Name</td>
+            <td class="px-6 py-4 text-[var(--foreground)] font-semibold">ILM - Islamic Literature & Material</td>
+          </tr>
+          <tr class="border-b border-[var(--border)]">
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)]">Developer</td>
+            <td class="px-6 py-4 text-[var(--foreground)]">MH-Developer</td>
+          </tr>
+          <tr class="border-b border-[var(--border)]">
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)]">Package ID</td>
+            <td class="px-6 py-4 text-[var(--foreground)]"><code class="bg-[var(--background)] px-2 py-0.5 rounded text-xs">com.mh.mueawin.mainfolder</code></td>
+          </tr>
+          <tr class="border-b border-[var(--border)]">
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)]">Category</td>
+            <td class="px-6 py-4 text-[var(--foreground)]">Tools / Islamic Literature</td>
+          </tr>
+          <tr class="border-b border-[var(--border)]">
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)]">Platform</td>
+            <td class="px-6 py-4 text-[var(--foreground)]">Android</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium text-[var(--muted-foreground)]">Language</td>
+            <td class="px-6 py-4 text-[var(--foreground)]">Gujarati</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== CTA / DOWNLOAD SECTION ===== -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="text-center animate-fade-in delay-500">
+      <h2 class="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">Download ILM Today</h2>
+      <p class="text-[var(--muted-foreground)] text-lg mb-8 max-w-xl mx-auto">
+        Start your journey with comprehensive Islamic content in Gujarati. Free on Google Play.
+      </p>
+      <a href="https://play.google.com/store/apps/details?id=com.mh.mueawin.mainfolder" target="_blank"
+         class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734c0-.382.218-.72.609-.92z" fill="#fff" opacity="0.9"/>
+          <path d="M17.244 8.555L14.5 10.142 13.792 12l.708 1.858 2.744 1.587 3.1-1.787c.88-.508.88-1.808 0-2.316l-3.1-1.787z" fill="#fff" opacity="0.7"/>
+          <path d="M3.609 1.814L13.792 12l.708-1.858-7.446-7.446-3.445 2.118z" fill="#fff" opacity="0.8"/>
+          <path d="M3.609 22.186l3.445-2.118L14.5 12.622l-.708-1.858L3.609 22.186z" fill="#fff" opacity="0.6"/>
+        </svg>
+        Download on Google Play
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-[var(--border)] py-8 mt-8">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-sm text-[var(--muted-foreground)]">
+        © 2024 MH-Developer. All rights reserved.
+      </p>
+      <p class="text-xs text-[var(--muted-foreground)] mt-2 opacity-60">
+        ILM - Islamic Literature & Material | Gujarati Islamic Content App
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
